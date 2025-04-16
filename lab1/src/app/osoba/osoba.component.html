@@ -1,9 +1,27 @@
-<div [ngClass] = "{'wyrozniona': osoba.czyWyrozniona}">
+<!-- <div (mouseenter)="czyNajechano = true" 
+     (mouseleave)="czyNajechano = false"
+     [ngClass] = "{'wyrozniona': osoba.czyWyrozniona, 'podswietl': czyNajechano}">
+     
     Imie: <strong>{{osoba.imie}}</strong>
     Nazwisko: <strong>{{osoba.nazwisko}}</strong>
     Wiek: <strong>{{osoba.wiek}}</strong>
     Czy wyróżniona: <strong>{{osoba.czyWyrozniona ? 'tak' : 'nie'}}</strong>
-    <button [ngStyle] = "{'margin-left': '1rem'}" (click)="onWyroznijClick()">
+    <button 
+        [ngStyle] = "{'margin-left': '1rem'}" 
+        (click)="onWyroznijClick()">
+        {{osoba.czyWyrozniona ? 'Odepnij' : 'Wyroznij'}}
+    </button>
+</div> -->
+
+<div appPodswietlnie[ngClass] = "{'wyrozniona': osoba.czyWyrozniona}">
+     
+    Imie: <strong>{{osoba.imie}}</strong>
+    Nazwisko: <strong>{{osoba.nazwisko}}</strong>
+    Wiek: <strong>{{osoba.wiek}}</strong>
+    Czy wyróżniona: <strong>{{osoba.czyWyrozniona ? 'tak' : 'nie'}}</strong>
+    <button 
+        [ngStyle] = "{'margin-left': '1rem'}" 
+        (click)="onWyroznijClick()">
         {{osoba.czyWyrozniona ? 'Odepnij' : 'Wyroznij'}}
     </button>
 </div>
