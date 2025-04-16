@@ -1,0 +1,11 @@
+<p>{{title}} - <button (click)="wyswietlLicznik = !wyswietlLicznik">{{wyswietlLicznik ? 'Ukryj licznik' : 'Pokaż licznik'}} </button></p>
+
+
+
+<app-licznik *ngIf="wyswietlLicznik" [licznik]="licznik" opis="Liczba wyróżnionych osób"></app-licznik>
+
+<app-osoba (zmianaWyroznienia) = "onZmianaWyroznienia($event)" [osoba]="osoby[0]"></app-osoba>
+<app-osoba (zmianaWyroznienia) = "onZmianaWyroznienia($event)" [osoba]="osoby[1]"></app-osoba>
+<app-osoba (zmianaWyroznienia) = "onZmianaWyroznienia($event)" [osoba]="osoby[2]"></app-osoba>
+<app-osoba (zmianaWyroznienia) = "onZmianaWyroznienia($event)" [osoba]="osoby[3]"></app-osoba>
+<app-osoba (zmianaWyroznienia) = "onZmianaWyroznienia($event)" [osoba]="osoby[4]"></app-osoba>

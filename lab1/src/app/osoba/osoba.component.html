@@ -1,0 +1,9 @@
+<div [ngClass] = "{'wyrozniona': osoba.czyWyrozniona}">
+    Imie: <strong>{{osoba.imie}}</strong>
+    Nazwisko: <strong>{{osoba.nazwisko}}</strong>
+    Wiek: <strong>{{osoba.wiek}}</strong>
+    Czy wyróżniona: <strong>{{osoba.czyWyrozniona ? 'tak' : 'nie'}}</strong>
+    <button [ngStyle] = "{'margin-left': '1rem'}" (click)="onWyroznijClick()">
+        {{osoba.czyWyrozniona ? 'Odepnij' : 'Wyroznij'}}
+    </button>
+</div>
