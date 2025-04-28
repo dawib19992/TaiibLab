@@ -1,0 +1,10 @@
+<p>zaznaczone-osoby works!</p>
+
+<ol>
+    <li *ngFor="let osoba of zaznaczoneOsoby">
+        {{osoba.imie}} {{osoba.nazwisko}}
+    </li>
+    <li *ngFor="let osoba of zaznaczoneOsoby$ | async">
+        {{osoba.imie}} {{osoba.nazwisko}} <button (click)="odznacz(osoba)">Odznacz</button>
+    </li>
+</ol>
