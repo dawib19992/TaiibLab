@@ -29,7 +29,7 @@ export class OsobaComponent implements OnDestroy{
     this.sub.add(sub);
   }
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    this.sub.unsubscribe();
   }
 
   onZmianaWyroznieniaClick(): void {
