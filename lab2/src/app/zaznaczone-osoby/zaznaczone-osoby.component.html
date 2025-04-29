@@ -5,6 +5,8 @@
         {{osoba.imie}} {{osoba.nazwisko}}
     </li>
     <li *ngFor="let osoba of zaznaczoneOsoby$ | async">
-        {{osoba.imie}} {{osoba.nazwisko}} <button (click)="odznacz(osoba)">Odznacz</button>
+        <!-- {{osoba.imie}} {{osoba.nazwisko}}  -->
+         {{osoba | parserOsoby: '/'}}
+         <button (click)="odznacz(osoba)">Odznacz</button>
     </li>
 </ol>

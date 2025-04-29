@@ -3,10 +3,11 @@ import { ZaznaczoneOsobyService } from '../zaznaczone-osoby.service';
 import { CommonModule } from '@angular/common';
 import { Osoba } from '../../models/osoba.class';
 import { Observable, Subscription } from 'rxjs';
+import { ParserOsobyPipe } from '../parser-osoby.pipe';
 
 @Component({
   selector: 'app-zaznaczone-osoby',
-  imports: [CommonModule],
+  imports: [CommonModule, ParserOsobyPipe],
   templateUrl: './zaznaczone-osoby.component.html',
   styleUrl: './zaznaczone-osoby.component.css'
 })
