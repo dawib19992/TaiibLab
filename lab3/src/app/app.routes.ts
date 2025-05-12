@@ -7,4 +7,5 @@ export const routes: Routes = [
     {path: 'klienci', component: KlienciComponent},
     {path: 'osoby', component: OsobyComponent},
     {path: 'filmy', component: FilmyComponent},
+    {path: '', redirectTo: 'osoby', pathMatch: 'full'},
 ];
